@@ -68,32 +68,3 @@ while True:
     elif parsed_result.get("step")=="OUTPUT":
         print(f"Output: {parsed_result.get('output')}")
         break
-# response=client.chat.completions.create(
-#     model="gpt-4o-mini",
-#     response_format={"type":"json_object"},
-#     messages=[
-#         {
-#             "role":"system",
-#             "content":SYSTEM_PROMPT
-#         },
-#         {
-#             "role":"user",
-#             "content":"How's the weather today?"
-#         },
-#         {
-#             "role":"assistant",
-#             "content":json.dumps({
-#                     "step": "START",
-#                     "thoughts": "The user is asking for the current weather information. I need to gather the current weather data for their location.",
-#                     "action":"",
-#                     "action_input": "",
-#                     "output": ""
-#                 }
-#     )},
-#     {
-#         "role":"assistant",
-#         "content":json.dumps({"step": "PLAN", "thoughts": "To provide accurate weather information, I need to define the user's location as well as understand the type of weather details they want (temperature, conditions, etc.).", "action": "", "action_input": "", "output": ""})    }
-#     ]
-# )
-
-# print(response.choices[0].message.content)
